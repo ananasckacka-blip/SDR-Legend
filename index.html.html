@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SDR 😈</title>
+</head>
+
+<body style="background:black;color:#00ff00;font-family:monospace;font-size:18px;">
+
+<script>
+let text = `
+[ SYSTEM WARNING ]
+
+> Connecting to SDR_CORE...
+شما هک شدید
+> Security check...
+> ████████████████████ 100%
+
+[!] UNKNOWN DEVICE DETECTED
+[!] SYSTEM RESPONSE DELAYED
+
+> Access level: ROOT
+> Loading...
+> 13%
+> 47%
+> 82%
+> 100%
+
+ACCESS GRANTED 😈
+
+> Reconnecting...
+> Reconnecting...
+> Reconnecting...
+
+>>> SDR_CORE.exe
+>>> SESSION TERMINATED
+فعلا واقعی نیست ، ولی بعدا واقعی میشه
+`;
+
+let i = 0;
+
+function type() {
+    if (i < text.length) {
+        document.body.innerText += text[i];
+        i++;
+
+        window.scrollTo(0, document.body.scrollHeight);
+
+        let delay = Math.random() < 0.12
+            ? 300 + Math.random() * 500
+            : 5 + Math.random() * 25;
+
+        setTimeout(type, delay);
+    } else {
+        setTimeout(() => {
+            document.body.innerText = "";
+            i = 0;
+            type();
+        }, 500);
+    }
+}
+
+type();
+</script>
+
+</body>
+</html>
